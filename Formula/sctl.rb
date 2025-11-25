@@ -8,7 +8,7 @@ class Sctl < Formula
   depends_on "fzf"
 
   def install
-    bin.install sctl
+    bin.install "sctl"
   end
 
 end
