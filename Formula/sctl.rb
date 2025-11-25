@@ -11,3 +11,4 @@ class Sctl < Formula
     bin.install sctl
   end
 
+end
