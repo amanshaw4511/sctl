@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+
+service=$(systemctl list-units --type=service --no-legend \
+		| fzf \
+		| awk '{ print $1 }'
+	)
+
+actions=$(echo -e "status\nstart\nstop\nenable\ndisable\nenable --now\ndisable --now" \
+		| fzf
+	)
+
+systemctl "$actions" "$service"
